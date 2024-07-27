@@ -1,0 +1,158 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #E8F8F5; /* Mint Cream */
+}
+
+header {
+    background: #27AE60; /* Green */
+    color: #fff;
+    padding: 4rem 0 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+header .consultation-button {
+    display: inline-block;
+    background-color: #FFD700; /* Vibrant Yellow */
+    color: #333;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .consultation-button:hover {
+    background-color: #FFC107; /* Darker Yellow */
+}
+
+.typing-animation {
+    border-right: 0.1em solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+}
+
+nav {
+    background: #27AE60; /* Green */
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 80px; /* Add margin to avoid content being hidden behind the fixed navbar */
+}
+
+section {
+    height: 100vh; /* Make each section take the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+section .content {
+    max-width: 800px;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+section .content h2 {
+    margin-bottom: 1rem;
+}
+
+section .content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section .content ul li {
+    background: #E8F8F5; /* Mint Cream */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+section#about {
+
+    color: #333; /* Change text color to stand out on the image background */
+}
+
+footer {
+    background: #27AE60; /* Green */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
