@@ -1,5 +1,5 @@
 ### NextGenIT Consultancy Portfolio
-Welcome to the NextGenIT Consultancy Portfolio repository! This project showcases a professional and vibrant portfolio website for Byron Odhiambo, an experienced IT consultant specializing in software development, data management, and project management.
+Welcome to the NextGenIT Consultancy Portfolio repository! This project showcases a professional and vibrant portfolio website for NEXTGEN IT solutions, an experienced IT consultant specializing in software development, data management, and project management.
 
 ## Table of Contents
 About
