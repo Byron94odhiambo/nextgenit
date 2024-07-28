@@ -17,4 +17,19 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Typing animation
+    const typingText = document.getElementById("typing-text");
+    const text = "Hi I'm Byron";
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typingText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 150); // Adjust the speed of typing
+        }
+    }
+
+    type();
 });

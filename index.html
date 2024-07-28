@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>
-            <span class="typing-animation">Hi I'm Byron</span>
-        </h1>
-        <p>I'm a software developer with a robust background in data management,</p>
-             <p>machine learning, software development.</p>
-        <a href="byron_cv.pdf" download class="consultation-button">Download CV</a>
-    </header>
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
@@ -23,18 +15,20 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#consultation">Book a Consultation</a></li>
-            
         </ul>
     </nav>
     <main>
         <section id="about" class="fade-in">
-            <div class="content">
-                <h2>About Me</h2>
-                <h4>Hi I'm Byron</h4>
-                <p>I'm a software developer with a robust background in data management,
-
-                    machine learning, software development.</p>
-            </div>
+            <header>
+                <img src="byron.jpeg" alt="Byron Odhiambo" class="profile-image">
+                <h1>
+                    <span class="typing-animation" id="typing-text"></span>
+                </h1>
+                <div class="about-text">
+                    <p>I'm a software developer with a robust background in software development and machine learning.</p>
+                </div>
+                <a href="byron_cv.pdf" download class="consultation-button">Download CV</a>
+            </header>
         </section>
         <section id="skills" class="fade-in">
             <div class="content">
@@ -86,7 +80,6 @@
                     <h3>Bachelor of Business Information Technology</h3>
                     <p>South Eastern Kenya University</p>
                 </div>
-                
             </div>
         </section>
         <section id="contact" class="fade-in">

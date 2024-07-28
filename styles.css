@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #27AE60; /* Green */
+    background: linear-gradient(45deg, #27AE60, #2ECC71); /* Green gradient */
     color: #fff;
     padding: 4rem 0 1rem;
     text-align: center;
@@ -28,20 +28,28 @@ header p {
     margin: 1rem 0;
 }
 
+header .about-text {
+    padding: 0 2rem; /* Add padding to the left and right */
+}
+
+header .about-text p {
+    margin: 1rem 0; /* Add margin between paragraphs */
+}
+
 header .consultation-button {
     display: inline-block;
-    background-color: #FFD700; /* Vibrant Yellow */
+    background: linear-gradient(45deg, #FFD700, #FFC107); /* Yellow gradient */
     color: #333;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 header .consultation-button:hover {
-    background-color: #FFC107; /* Darker Yellow */
+    background: linear-gradient(45deg, #FFC107, #FFB300); /* Darker yellow gradient */
 }
 
 .typing-animation {
@@ -62,8 +70,17 @@ header .consultation-button:hover {
     50% { border-color: #fff; }
 }
 
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 5px solid #fff;
+}
+
 nav {
-    background: #27AE60; /* Green */
+    background: linear-gradient(45deg, #27AE60, #2ECC71); /* Green gradient */
     color: #fff;
     padding: 0.5rem 0;
     text-align: center;
@@ -77,10 +94,12 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
@@ -95,11 +114,16 @@ main {
 }
 
 section {
-    height: 100vh; /* Make each section take the full viewport height */
+    min-height: 100vh; /* Make each section take at least the full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    background: linear-gradient(45deg, #E8F8F5, #A3E4D7); /* Light mint gradient */
+}
+
+section:nth-child(even) {
+    background: linear-gradient(45deg, #A3E4D7, #D1F2EB); /* Slightly darker mint gradient */
 }
 
 section .content {
@@ -109,6 +133,7 @@ section .content {
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 10px;
+    width: 100%;
 }
 
 section .content h2 {
@@ -127,13 +152,8 @@ section .content ul li {
     border-radius: 5px;
 }
 
-section#about {
-
-    color: #333; /* Change text color to stand out on the image background */
-}
-
 footer {
-    background: #27AE60; /* Green */
+    background: linear-gradient(45deg, #27AE60, #2ECC71); /* Green gradient */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -155,4 +175,61 @@ footer {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 0 1rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    section .content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    header .consultation-button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    section .content {
+        padding: 0.5rem;
+    }
 }
