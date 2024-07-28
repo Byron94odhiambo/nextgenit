@@ -32,4 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     type();
+
+    // Navbar toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
 });

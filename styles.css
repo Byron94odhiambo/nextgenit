@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -87,23 +91,112 @@ nav {
     z-index: 1000;
 }
 
-nav ul {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-menu {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
-nav ul li {
+.nav-menu li {
     margin: 0 1rem;
 }
 
-nav ul li a {
+.nav-menu li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        max-height: 300px;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    header {
+        padding: 2rem 0 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    section .content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    header .consultation-button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    section .content {
+        padding: 0.5rem;
+    }
 }
 
 main {
@@ -172,61 +265,4 @@ footer {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    header {
-        padding: 2rem 0 1rem;
-    }
-    
-    header p {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-    
-    .profile-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    section .content {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 1rem 0 0.5rem;
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    header p {
-        font-size: 0.9rem;
-    }
-    
-    header .consultation-button {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-    }
-    
-    .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-    
-    section .content {
-        padding: 0.5rem;
-    }
 }
