@@ -137,15 +137,21 @@ nav {
     }
 
     .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(39, 174, 96, 0.9); /* Slightly more opaque for better readability */
         flex-direction: column;
         width: 100%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
+        z-index: 999; /* Ensure the menu is above other content */
     }
 
     .nav-menu.active {
-        max-height: 300px;
+        max-height: 300px; /* Adjust based on the number of menu items */
     }
 
     .nav-menu li {
