@@ -23,32 +23,7 @@ HTML5: Structure of the website.
 CSS3: Styling the website with a fresh and vibrant theme.
 JavaScript: Adding interactivity and animations.
 Calendly: Integration for booking consultations.
-Installation
-To set up this project locally, follow these steps:
 
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-github-username/nextgenit-portfolio.git
-Navigate to the project directory:
-bash
-Copy code
-cd nextgenit-portfolio
-Open the index.html file in your preferred browser:
-bash
-Copy code
-open index.html
-Usage
-Navigate through the different sections using the navigation bar.
-Book a consultation using the "Book a Consultation" button.
-Connect with Byron on LinkedIn or GitHub through the provided links.
-Contributing
-We welcome contributions to improve this portfolio. To contribute:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Make your changes.
-Commit your changes (git commit -m 'Add some feature').
 Push to the branch (git push origin feature/YourFeature).
 Open a Pull Request.
 License
